@@ -27,10 +27,10 @@ namespace Tyuiu.KolesnikovMN.Sprint2.Task6.V8
             int m;
 
             Console.WriteLine("Введите день: ");
-            n = Convert.ToInt32(Console.ReadLine());
+            m = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Введите месяц: ");
-            m = Convert.ToInt32(Console.ReadLine());
+            n = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");

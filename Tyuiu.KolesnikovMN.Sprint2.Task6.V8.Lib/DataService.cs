@@ -6,11 +6,11 @@ namespace Tyuiu.KolesnikovMN.Sprint2.Task6.V8.Lib
     {
         public string FindDateOfPreviousDay(int m, int n)
         {
-            n -= 1;
+            m -= 1;
             string month;
-            string day = Convert.ToString(n);
+            string day = Convert.ToString(m);
 
-            switch(m)
+            switch(n)
             {
                 case 1: month = "01";break;  
                 case 2: if (n < 1) { month = "01"; day = "31"; } else { month = "02"; } break;
