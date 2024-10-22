@@ -9,8 +9,8 @@ namespace Tyuiu.KolesnikovMN.Sprint2.Task7.V10.Test
         public void ValidCheckDotInShadedArea()
         {
             DataService ds = new DataService();
-            double x = -7;
-            double y = 7;
+            double x = -1;
+            double y = 1;
 
             var res = ds.CheckDotInShadedArea(x, y);
             bool wait = true;
