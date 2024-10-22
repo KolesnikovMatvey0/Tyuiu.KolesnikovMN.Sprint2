@@ -6,139 +6,144 @@ namespace Tyuiu.KolesnikovMN.Sprint2.Task5.V9.Lib
     {
         public string FindDateOfNextDay(int m, int n)
         {
-            n += 1;
+            string day = Convert.ToString(n + 1);
             string month;
+            n += 1;
+
             switch(m)
             {
                 case 1:
                     if (n == 32)
                     {
-                        month = "Февраль";
-                        n = 1;
+                        month = "02";
+                        day = "01";
                     }
                     else
                     {
-                        month = "Январь";
+                        month = "01";
                     }
                     break;
                 case 2:
                     if (n == 29)
                     {
-                        month = "Март";
-                        n = 1;
+                        month = "03";
+                        day = "01";
                     }
                     else
                     {
-                        month = "Февраль";
+                        month = "02";
                     }
                     break;
                 case 3:
                     if (n == 32)
                     {
-                        month = "Апрель";
-                        n = 1;
+                        month = "04";
+                        day = "01";
                     }
                     else
                     {
-                        month = "Март";
+                        month = "03";
                     }
                     break;
                 case 4:
                     if (n == 31)
                     {
-                        month = "Май";
-                        n = 1;
+                        month = "05";
+                        day = "01";
                     }
                     else
                     {
-                        month = "Апрель";
+                        month = "04";
                     }
                     break;
                 case 5:
                     if (n == 32)
                     {
-                        month = "Июнь";
-                        n = 1;
+                        month = "06";
+                        day = "01";
                     }
                     else
                     {
-                        month = "Май";
+                        month = "05";
                     }
                     break;
                 case 6:
                     if (n == 31)
                     {
-                        month = "Июль";
-                        n = 1;
+                        month = "07";
+                        day = "01";
                     }
                     else
                     {
-                        month = "Июнь";
+                        month = "06";
                     }
                     break;
                 case 7:
                     if (n == 32)
                     {
-                        month = "Август";
-                        n = 1;
+                        month = "08";
+                        day = "01";
                     }
                     else
                     {
-                        month = "Июль";
+                        month = "07";
                     }
                     break;
                 case 8:
                     if (n == 32)
                     {
-                        month = "Сентябрь";
-                        n = 1;
+                        month = "09";
+                        day = "01";
                     }
                     else
                     {
-                        month = "Август";
+                        month = "08";
                     }
                     break;
                 case 9:
                     if (n == 31)
                     {
-                        month = "Октябрь";
-                        n = 1;
+                        month = "10";
+                        day = "01";
                     }
                     else
                     {
-                        month = "Сентябрь";
+                        month = "9";
                     }
                     break;
                 case 10:
                     if (n == 32)
                     {
-                        month = "Ноябрь";
-                        n = 1;
+                        month = "11";
+                        day = "01";
                     }
                     else
                     {
-                        month = "Октябрь";
+                        month = "10";
                     }
                     break;
                 case 11:
                     if (n == 31)
                     {
-                        month = "Декабрь";
-                        n = 1;
+                        month = "12";
+                        day = "01";
                     }
                     else
                     {
-                        month = "Ноябрь";
+                        month = "11";
                     }
                     break;
                 case 12:
-                    month = "Декабрь";
+                    month = "12";
                     break;
                 default:
                     throw new ArgumentException($"Аргумент должен быть от 1 до 12. Значение {m}");
             }
-            string day = Convert.ToString(n);
-            string date = $"{day} {month} ";
+            if (day.Length == 1)
+            {
+                day = "0" + day;
+            }
+            string date = $"{day}.{month}";
             return date;
         }
     }
