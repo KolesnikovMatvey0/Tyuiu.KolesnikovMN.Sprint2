@@ -6,7 +6,7 @@ namespace Tyuiu.KolesnikovMN.Sprint2.Task5.V9.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void ValidFindMonthName()
+        public void ValidFindDateOfNextDay()
         {
             DataService ds = new DataService();
             int n = 8;
