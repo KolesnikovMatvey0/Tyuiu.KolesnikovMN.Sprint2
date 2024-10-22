@@ -6,9 +6,9 @@ namespace Tyuiu.KolesnikovMN.Sprint2.Task5.V9.Lib
     {
         public string FindDateOfNextDay(int m, int n)
         {
-            string day = Convert.ToString(n + 1);
-            string month;
             n += 1;
+            string day = Convert.ToString(n);
+            string month;
 
             switch(m)
             {
@@ -108,7 +108,7 @@ namespace Tyuiu.KolesnikovMN.Sprint2.Task5.V9.Lib
                     }
                     else
                     {
-                        month = "9";
+                        month = "09";
                     }
                     break;
                 case 10:
@@ -139,9 +139,9 @@ namespace Tyuiu.KolesnikovMN.Sprint2.Task5.V9.Lib
                 default:
                     throw new ArgumentException($"Аргумент должен быть от 1 до 12. Значение {m}");
             }
-            if (day.Length == 1)
+            if (day.Length < 2)
             {
-                day = "0" + day;
+                day = $"0{day}";
             }
             string date = $"{day}.{month}";
             return date;
